@@ -1,0 +1,19 @@
+Along with a klatch of like-minded nerds around St. Louis, I'm working
+through the classic text Structure and Interpretation of Computer
+Programming, by Abelson, Sussman, and Sussman.
+
+See here:
+http://mitpress.mit.edu/sicp/full-text/book/book.html
+
+and here:
+http://groups.google.com/group/sicp-lounge
+
+I'm doing all this in Clojure, apparently because I want to grouse
+about all the ways in which it's different from (and, I therefore
+whine, inferior to) Scheme. Maybe by the time I reach the end of the
+book I'll think the differences are improvements.
+
+Some of the code here is written by me, and some of it is lifted from
+the book. Of the former, none of it is code you'd want to put into
+production. So consider it covered by a protection even stronger than
+copyright: the Power of Suck.
