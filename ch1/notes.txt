@@ -1,0 +1,3 @@
+Clojure chokes on (ackermann 2 5). PLT Scheme chugs for a few seconds,
+then comes up with the (20ish-k digit) answer. However, I don't really
+quite grok recur yet, so maybe I'm just doing something wrong.
