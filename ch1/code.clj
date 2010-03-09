@@ -186,3 +186,34 @@
 	  last (first tree)]
       (cons (build-row nil last) tree))
     (list *pascal-triangle-base*)))
+
+;; ex. 1.16: iterative (tail recursive) version of fast-expt
+(defn fast-expt-i [b n]
+  (defn iter [a b n]
+    (cond (= n 0) a
+	  (even? n) (recur a (* b b) (/ n 2))
+	  :else (recur (* a b) b (- n 1))))
+
+  (iter 1 b n))
+
+;; ex. 1.17: integer multiplication by repeated addition
+;; (with even factor handling for logarithmic performance)
+(defn log-add-mult [a b]
+  (defn twice [a] (+ a a))
+  (defn half [a] (/ a 2))
+
+  (cond (= b 0) 0
+	(even? b) (twice (log-add-mult a (half b)))
+	:else (+ a (log-add-mult a (- b 1)))))
+
+;; ex. 1.18: iterative (tail recursive) version of log-add-mult
+(defn log-add-mult-i [a b]
+  (defn twice [a] (+ a a))
+  (defn half [a] (/ a 2))
+
+  (defn iter [acc a b]
+    (cond (= b 0) acc
+	  (even? b) (recur acc (twice a) (half b))
+	  :else (recur (+ acc a) a (- b 1))))
+
+  (iter 0 a b))
